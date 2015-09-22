@@ -18,6 +18,11 @@
     },
     "provisioners": [
     {
+        "type": "file",
+        "source": "/packer/app",
+        "destination": "/etc/letschat"
+    },
+    {
         "type": "shell",
         "script": "scripts/nodejs.sh"
     },
