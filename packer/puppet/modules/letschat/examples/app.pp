@@ -5,7 +5,7 @@ class { 'letschat::app':
     dbhost          => 'dbserver0',
     dbport          => '27017',
     cookie          => 'thistest',
-    deploy_dir      => '/etc/letschat',
+    deploy_dir      => '/etc/letschat/app',
     http_enabled    => true,
     lc_bind_address => '0.0.0.0',
     http_port       => '5000',

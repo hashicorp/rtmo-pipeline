@@ -15,7 +15,7 @@ class letschat::params {
   $db_name            = 'letschat'
   $db_port            = '27017'
   $mongo_bind_address = '0.0.0.0'
-  $lc_deploy_dir      = '/etc/letschat'
+  $lc_deploy_dir      = '/etc/letschat/app'
   $cookie             = 'secretsauce'
   $authproviders      = 'local'
   $registration       = true

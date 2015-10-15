@@ -89,7 +89,7 @@ class { 'letschat::app':
     dbhost          => 'dbserver0',
     dbport          => '27017',
     cookie          => 'thistest',
-    deploy_dir      => '/etc/letschat',
+    deploy_dir      => '/etc/letschat/app',
     http_enabled    => true,
     lc_bind_address => '0.0.0.0',
     http_port       => '5000',
@@ -119,7 +119,7 @@ the Node.js application, specifying which features to enable, their settings, an
 the web application can reach the MongoDB backend.
 ##### Parameters within `letschat::app`:
 ####`deploy_dir`
-The directory to deploy the Let's Chat application to. Defaults to '/etc/letschat'
+The directory to deploy the Let's Chat application to. Defaults to '/etc/letschat/app'
 ####`http_enabled`
 Boolean to specify whether http is enabled. Defaults to 'true'
 ####`http_port`
