@@ -1,7 +1,7 @@
 //Provider
 provider "google" {
     account_file = "account.json"
-    project = "rtmo-consul"
+    project = "rtmo-pipeline"
     region = "us-central1"
 }
 
@@ -34,14 +34,14 @@ resource "template_file" "consul_upstart" {
 }
 
 //Networking
-resource "google_compute_network" "rtmo-consul" {
-    name = "rtmo-consul"
+resource "google_compute_network" "rtmo-pipeline" {
+    name = "rtmo-pipeline"
     ipv4_range = "10.0.0.0/16"
 }
 
 resource "google_compute_firewall" "allow-all" {
     name = "allow-all"
-    network = "${google_compute_network.rtmo-consul.name}"
+    network = "${google_compute_network.rtmo-pipeline.name}"
     source_ranges = ["0.0.0.0/0"]
 
     allow {
@@ -74,7 +74,7 @@ resource "google_compute_instance" "consul" {
   }
 
   network_interface {
-      network = "${google_compute_network.rtmo-consul.id}"
+      network = "${google_compute_network.rtmo-pipeline.id}"
       access_config {
       }
   }
@@ -97,7 +97,7 @@ resource "google_compute_instance" "mongodb" {
   }
 
   network_interface {
-      network = "${google_compute_network.rtmo-consul.id}"
+      network = "${google_compute_network.rtmo-pipeline.id}"
       access_config {
       }
   }
@@ -119,7 +119,7 @@ resource "google_compute_instance" "nodejs" {
   }
 
   network_interface {
-      network = "${google_compute_network.rtmo-consul.id}"
+      network = "${google_compute_network.rtmo-pipeline.id}"
       access_config {
       }
   }
