@@ -1,6 +1,6 @@
 {
     "variables": {
-        "atlas_username": "ATLAS_ACCOUNT_NAME"
+        "atlas_username": "ptr"
     },
     "builders": [
     {
