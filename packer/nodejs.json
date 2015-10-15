@@ -16,16 +16,16 @@
       "name": "{{user `atlas_username`}}/nodejs",
       "vcs": false
     },
-    "provisioners": [
-    {
-        "type": "file",
-        "source": "/packer/app",
-        "destination": "/etc/letschat"
-    },
+    "provisioners": [ 
     {
         "type": "shell",
         "script": "scripts/nodejs.sh"
     },
+    {
+        "type": "file",
+        "source": "app",
+        "destination": "/etc/letschat"
+    }, 
     {
         "type": "shell",
         "script": "scripts/consul.sh"
