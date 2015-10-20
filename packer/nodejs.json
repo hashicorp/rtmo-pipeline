@@ -7,7 +7,7 @@
       "type": "googlecompute",
       "account_file": "account.json",
       "image_name": "nodejs-{{timestamp}}",
-      "project_id": "rtmo-pipeline",
+      "project_id": "rtmo-pipeline-{{user `atlas_username`}}",
       "source_image": "ubuntu-1204-precise-v20150910",
       "zone": "us-central1-a"
     }
